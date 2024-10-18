@@ -9,7 +9,7 @@ Office.onReady(() => {
   // If needed, Office.js is ready to be called
 });
 
-async function onDocumentOpentHandler(event) {
+async function insertParagraph(event) {
   // Implement your custom code here. The following code is a simple Excel example.
   try {
     await Word.run(async (context) => {
@@ -38,4 +38,4 @@ function getGlobal() {
 
 const g = getGlobal() as any;
 
-Office.actions.associate("onDocumentOpentHandler", onDocumentOpentHandler);
+Office.actions.associate("insertParagraph", insertParagraph);
