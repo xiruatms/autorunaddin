@@ -13,7 +13,7 @@ async function insertParagraph(event) {
   Word.run(async (context) => {
     // insert a paragraph at the end of the document.
     const paragraph = context.document.body.insertParagraph(
-      "ExecuteFunction works. Button ID=" /*+ event.source.id*/,
+      "XiangminExecuteFunction works. Button ID=" /*+ event.source.id*/,
       Word.InsertLocation.end
     );
 
