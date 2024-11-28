@@ -14,7 +14,7 @@ async function insertParagraph(event) {
     // insert a paragraph at the end of the document.
     context.document.body.insertParagraph("Haha", "Start");
     await context.sync();
-    eventContext = context.document.onParagraphAdded.add(paragraphAdded);
+    //eventContext = context.document.onParagraphAdded.add(paragraphAdded);
     await context.sync();
   });
   console.log("Added event handler for when paragraphs are added.");
