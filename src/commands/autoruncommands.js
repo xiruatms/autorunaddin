@@ -17,7 +17,6 @@ async function insertParagraph(event) {
     //eventContext = context.document.onParagraphAdded.add(paragraphAdded);
     await context.sync();
   });
-  console.log("Added event handler for when paragraphs are added.");
   // Calling event.completed is required. event.completed lets the platform know that processing has completed.
   event.completed();
 }
