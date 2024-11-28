@@ -12,6 +12,8 @@ Office.onReady(() => {
 async function insertParagraph(event) {
   Word.run(async (context) => {
     // insert a paragraph at the end of the document.
+    context.document.body.insertParagraph("Haha", "Start");
+    await context.sync();
     eventContext = context.document.onParagraphAdded.add(paragraphAdded);
     await context.sync();
   });
