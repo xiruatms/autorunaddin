@@ -16,7 +16,7 @@ async function insertParagraph(event) {
       "XiangminExecuteFunction works. Button ID=" /*+ event.source.id*/,
       Word.InsertLocation.end
     );
-    context.document.onParagraphAdded.add(paragraphAdded);
+    //context.document.onParagraphAdded.add(paragraphAdded);
     await context.sync();
     // change the paragraph color to blue.
     //paragraph.font.color = "blue";
