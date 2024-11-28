@@ -27,6 +27,7 @@ async function insertParagraph(event) {
   // Calling event.completed is required. event.completed lets the platform know that processing has completed.
   event.completed();
 }
+/*
 async function paragraphAdded(event: Word.ParagraphAddedEventArgs) {
   await Word.run(async (context) => {
     const paragraph = context.document.body.insertParagraph(
@@ -34,7 +35,8 @@ async function paragraphAdded(event: Word.ParagraphAddedEventArgs) {
       Word.InsertLocation.end
     );
   });
-}
+}*/
+  
 function getGlobal() {
   return typeof self !== "undefined"
     ? self
