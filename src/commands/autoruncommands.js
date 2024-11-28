@@ -16,7 +16,7 @@ async function insertParagraph(event) {
       "XiangminExecuteFunction works. Button ID=" /*+ event.source.id*/,
       Word.InsertLocation.end
     );
-    //context.document.onParagraphAdded.add(paragraphAdded);
+    eventcontext = context.document.onParagraphAdded.add(paragraphAdded);
     //await context.sync();
     // change the paragraph color to blue.
     //paragraph.font.color = "blue";
@@ -27,7 +27,7 @@ async function insertParagraph(event) {
   // Calling event.completed is required. event.completed lets the platform know that processing has completed.
   event.completed();
 }
-/*
+
 async function paragraphAdded(event: Word.ParagraphAddedEventArgs) {
   await Word.run(async (context) => {
     const paragraph = context.document.body.insertParagraph(
@@ -35,7 +35,7 @@ async function paragraphAdded(event: Word.ParagraphAddedEventArgs) {
       Word.InsertLocation.end
     );
   });
-}*/
+}
   
 function getGlobal() {
   return typeof self !== "undefined"
