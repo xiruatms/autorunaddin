@@ -17,7 +17,7 @@ async function insertParagraph(event) {
       Word.InsertLocation.end
     );
     //context.document.onParagraphAdded.add(paragraphAdded);
-    await context.sync();
+    //await context.sync();
     // change the paragraph color to blue.
     //paragraph.font.color = "blue";
 
