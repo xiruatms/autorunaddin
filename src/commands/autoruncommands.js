@@ -12,19 +12,19 @@ Office.onReady(() => {
 async function insertParagraph(event) {
   Word.run(async (context) => {
     // insert a paragraph at the end of the document.
-    context.document.body.insertParagraph("Haha", "Start");
-    await context.sync();
-    //eventContext = context.document.onParagraphAdded.add(paragraphAdded);
+    const paragraph = context.document.body.insertParagraph(
+      "ExecuteFunction works. Button ID=" /*+ event.source.id*/,
+      Word.InsertLocation.end
+    );
+
+    // change the paragraph color to blue.
+    //paragraph.font.color = "blue";
+
     await context.sync();
   });
+
   // Calling event.completed is required. event.completed lets the platform know that processing has completed.
   event.completed();
-}
-
-async function paragraphAdded(event: Word.ParagraphAddedEventArgs) {
-  await Word.run(async (context) => {
-    console.log(`${event.type} event detected. IDs of paragraphs that were added:`, event.uniqueLocalIds);
-  });
 }
 
 function getGlobal() {
